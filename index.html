@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - First Layer Fanatics</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        // IIFE to set theme before page load to prevent flash
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark'; // Default to dark
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
-<body data-theme="dark">
+<body>
 
     <nav class="navbar">
         <a href="index.html" class="logo">First Layer Fanatics</a>
@@ -64,19 +71,16 @@
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
-        // Function to set the theme
         function setTheme(theme) {
-            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             themeToggle.checked = (theme === 'dark');
         }
-
-        // Check for a saved theme in localStorage, or use the body's default
-        const savedTheme = localStorage.getItem('theme') || document.body.getAttribute('data-theme');
         
-        // Apply the determined theme
-        setTheme(savedTheme);
+        // Set the toggle state on load
+        setTheme(currentTheme);
 
         // Add event listener for the toggle
         themeToggle.addEventListener('change', () => {

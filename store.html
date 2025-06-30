@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store - Your Brand Name</title>
+    <title>Store - First Layer Fanatics</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Your Brand Name</a>
+        <a href="index.html" class="logo">First Layer Fanatics</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="store.html" class="active">Store</a></li>
@@ -54,21 +60,20 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Your Brand Name. All Rights Reserved.</p>
+        <p>&copy; 2025 First Layer Fanatics. All Rights Reserved.</p>
     </footer>
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
         function setTheme(theme) {
-            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             themeToggle.checked = (theme === 'dark');
         }
-
-        const savedTheme = localStorage.getItem('theme') || 'light';
         
-        setTheme(savedTheme);
+        setTheme(currentTheme);
 
         themeToggle.addEventListener('change', () => {
             setTheme(themeToggle.checked ? 'dark' : 'light');

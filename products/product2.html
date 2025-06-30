@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sleek Smartwatch - First Layer Fanatics</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -26,6 +32,9 @@
     </nav>
 
     <main class="container">
+        <div class="breadcrumb">
+            <a href="../store.html">&larr; Back to Store</a>
+        </div>
         <div class="product-detail">
             <div class="product-image">
                 <img src="../images/product2.jpg" alt="Sleek Smartwatch">
@@ -56,16 +65,15 @@
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
         function setTheme(theme) {
-            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             themeToggle.checked = (theme === 'dark');
         }
-
-        const savedTheme = localStorage.getItem('theme') || 'light';
         
-        setTheme(savedTheme);
+        setTheme(currentTheme);
 
         themeToggle.addEventListener('change', () => {
             setTheme(themeToggle.checked ? 'dark' : 'light');

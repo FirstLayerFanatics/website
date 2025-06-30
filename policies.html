@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store Policies - First Layer Fanatics</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -29,33 +35,50 @@
         <h1>Store Policies</h1>
 
         <section class="policy-section">
+            <h2>Order & Production Policy</h2>
+            <p><strong>Made to Order:</strong> Every item at First Layer Fanatics is made to order especially for you! This means we don't hold a large inventory, and your product begins its life in our 3D printers only after your order is placed. This allows us to ensure the highest quality and reduces waste. Production time is typically 3-5 business days before your order is shipped.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2>Shipping Policy</h2>
+            <p>Once your made-to-order item is complete and has passed our quality check, it will be packaged for shipment. Shipping typically takes <strong>1-5 business days</strong> after the production period is complete.</p>
+            <ul>
+                <li><strong>Carriers:</strong> We use a variety of shipping carriers to ensure the best service, including USPS, FedEx, and UPS.</li>
+                <li><strong>Timeframe Exclusions:</strong> The shipping range does not include weekends or public holidays.</li>
+                <li><strong>Tracking:</strong> You will receive a shipping confirmation email with a tracking number as soon as your order has been dispatched.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2>Return & Refund Policy</h2>
+            <p>Your satisfaction is our top priority. As our products are made to order, please review our return policy carefully.</p>
+            <ul>
+                <li><strong>Non-Custom Orders:</strong> If you are not satisfied with your non-custom item, please contact us within 14 days of delivery to arrange for a return. Items must be returned in their original, unused condition at the buyer's expense.</li>
+                <li><strong>Custom & Personalized Orders:</strong> Due to the unique and creative nature of custom and personalized orders, these items are <strong>non-returnable and non-refundable.</strong> We work closely with you during the design process to ensure you are happy before printing begins.</li>
+                <li><strong>Damaged or Defective Items:</strong> In the rare event that an item arrives damaged or with a significant manufacturing defect beyond the inherent characteristics noted in our 3D Printing Quality Disclaimer, please contact us within 7 days of delivery with photos of the issue. We will work with you to provide a replacement.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
             <h2>3D Printed Product Quality Disclaimer</h2>
             <p>Please be aware that our products are created using 3D printing technology. This manufacturing process has unique characteristics that you should understand before purchasing.</p>
             <ul>
                 <li><strong>Layer Lines:</strong> 3D printing involves building an object layer by layer. As a result, subtle, fine lines will be visible on the surface of the products. These are a natural and unavoidable part of the 3D printing process and are not considered a defect.</li>
                 <li><strong>Minor Imperfections:</strong> While we strive for the highest quality possible, small imperfections such as bumps or fine stringing may occur. We have a strict quality control process to ensure that only the best products are sent to our customers, but the unique nature of 3D printing means that no two items are exactly identical.</li>
-                <li><strong>Material Properties:</strong> Our products are typically printed with PLA, a biodegradable and environmentally friendly plastic. Please be aware that PLA can warp or deform if exposed to high temperatures (e.g., left in a hot car, placed in a dishwasher). Please handle with care.</li>
+                <li><strong>Material Properties:</strong> Our products are typically printed with PLA (Polylactic Acid) or PLA+, which are biodegradable and environmentally friendly plastics derived from corn starch.</li>
             </ul>
             <p>By purchasing our 3D printed products, you acknowledge and accept that these characteristics are inherent to the manufacturing process and contribute to the unique charm of each item.</p>
         </section>
 
         <section class="policy-section">
-            <h2>Return Policy</h2>
-            <p><strong>[IMPORTANT: Replace this with your actual return policy.]</strong></p>
-            <p>We want you to be completely satisfied with your purchase. If you are not happy with your product, you may return it within 30 days of the purchase date for a full refund. To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.</p>
-            <p>To initiate a return, please contact us at [Your Contact Email].</p>
-        </section>
-
-        <section class="policy-section">
-            <h2>Shipping Policy</h2>
-            <p><strong>[IMPORTANT: Replace this with your actual shipping policy.]</strong></p>
-            <p>We offer shipping to [Your Shipping Regions, e.g., the United States, worldwide]. All orders are processed within 1-3 business days. Shipping times typically range from 5-10 business days, depending on your location. You will receive a shipping confirmation email once your order has shipped.</p>
-        </section>
-        
-        <section class="policy-section">
-            <h2>Privacy Policy</h2>
-            <p><strong>[IMPORTANT: Replace this with your actual privacy policy.]</strong></p>
-            <p>We respect your privacy. We will not sell or distribute your personal information to third parties. All payment information is securely handled by our payment processor, Stripe, and is not stored on our servers. We only collect information necessary to process your order, such as your name and shipping address.</p>
+            <h2>Care Instructions</h2>
+            <p>To ensure the longevity of your 3D printed items, please follow these care instructions:</p>
+            <ul>
+                <li><strong>Hand-Wash Only:</strong> If your item needs cleaning, please hand-wash it gently with cool, soapy water.</li>
+                <li><strong>NOT Dishwasher Safe:</strong> The high heat of a dishwasher will cause the plastic to warp and deform. Do not place our products in a dishwasher.</li>
+                <li><strong>Avoid High Heat and Sunlight:</strong> PLA and PLA+ have a low melting point. To prevent warping, avoid leaving items in direct sunlight for extended periods or in hot places, like a car on a summer day.</li>
+                <li><strong>Special Materials:</strong> If a product is designed for high-heat environments (e.g., made from PETG or ASA), it will be explicitly stated in the product's description. Unless otherwise noted, assume standard PLA care is required.</li>
+            </ul>
         </section>
 
     </main>
@@ -66,16 +89,15 @@
 
     <script>
         const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
 
         function setTheme(theme) {
-            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
             themeToggle.checked = (theme === 'dark');
         }
-
-        const savedTheme = localStorage.getItem('theme') || 'light';
         
-        setTheme(savedTheme);
+        setTheme(currentTheme);
 
         themeToggle.addEventListener('change', () => {
             setTheme(themeToggle.checked ? 'dark' : 'light');
