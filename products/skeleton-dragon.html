@@ -1,0 +1,48 @@
+
+<!-- products/skeleton-dragon.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulated Skeleton Dragon - First Layer Fanatics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>(function(){const theme=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',theme)})();</script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">First Layer Fanatics</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../store.html" class="active">Store</a></li>
+            <li><a href="../policies.html">Policies</a></li>
+            <li><div class="theme-switch-wrapper"><label class="theme-switch" for="theme-toggle"><input type="checkbox" id="theme-toggle" /><div class="slider"></div></label></div></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="breadcrumb"><a href="../store.html">&larr; Back to Store</a></div>
+        <div class="product-detail">
+            <div class="product-image"><img src="../images/skeleton-dragon.jpg" alt="Articulated Skeleton Dragon"></div>
+            <div class="product-info">
+                <h1>Articulated Skeleton Dragon</h1>
+                <p class="price">$8.99</p>
+                <div class="description">
+                    <p>Unearth a legend! This incredible Skeleton Dragon comes to life right in your hands. Every single joint, from the tip of its bony tail to its impressive wings and legs, moves with a satisfying, fluid motion.</p>
+                    <p>Perfect as a commanding presence on your desk, a unique fidget tool for focus and stress relief, or as an epic prop for your next Dungeons & Dragons campaign.</p>
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Fully Articulated: Lifelike posing and satisfying movement.</li>
+                        <li>Intricate Skeletal Design</li>
+                        <li>Versatile & Fun: Great as a sensory toy or TTRPG prop.</li>
+                    </ul>
+                    <p><strong>Dimensions (Approximate):</strong> 8"L x 6"W (wingspan).</p>
+                    <p><strong>Please Note:</strong> Not recommended for very young children due to small, intricate parts.</p>
+                </div>
+                <div class="stripe-buy-button"><p><em>Your Stripe "Buy Now" button will appear here.</em></p></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"><p>&copy; 2025 First Layer Fanatics. All Rights Reserved.</p></footer>
+    <script>const themeToggle=document.getElementById('theme-toggle');const currentTheme=localStorage.getItem('theme')||'dark';function setTheme(theme){document.documentElement.setAttribute('data-theme',theme);localStorage.setItem('theme',theme);themeToggle.checked=(theme==='dark')}setTheme(currentTheme);themeToggle.addEventListener('change',()=>{setTheme(themeToggle.checked?'dark':'light')});</script>
+</body>
+</html>

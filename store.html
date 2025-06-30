@@ -33,9 +33,269 @@
 
     <main class="container">
         <h1>Our Products</h1>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterSelection('all')">Show All</button>
+            <button class="filter-btn" onclick="filterSelection('fidgets')">Fidgets & Dragons</button>
+            <button class="filter-btn" onclick="filterSelection('desk')">Desk & Office</button>
+            <button class="filter-btn" onclick="filterSelection('wall')">Wall Art</button>
+            <button class="filter-btn" onclick="filterSelection('figurines')">Figurines & Gifts</button>
+            <button class="filter-btn" onclick="filterSelection('bathroom')">Bathroom Decor</button>
+        </div>
+
         <div class="product-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
+            <!-- CATEGORY: desk -->
+            <div class="product-card desk">
+                <img src="images/full-emoji-set.jpg" alt="Full Set of 8 Emoji Figures">
+                <div class="product-info">
+                    <h3 class="product-title">Full Set of 8 Emoji Figures</h3>
+                    <p class="product-price">$29.99</p>
+                    <a href="products/full-emoji-set.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: desk -->
+            <div class="product-card desk">
+                <img src="images/single-emoji-figure.jpg" alt="3D Printed Emoji Figure">
+                <div class="product-info">
+                    <h3 class="product-title">3D Printed Emoji Figure</h3>
+                    <p class="product-price">$3.99</p>
+                    <a href="products/single-emoji-figure.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: desk, bathroom -->
+            <div class="product-card desk bathroom">
+                <img src="images/tooth-pen-holder.jpg" alt="Tooth Pen Holder & Toothbrush Stand">
+                <div class="product-info">
+                    <h3 class="product-title">Tooth Pen Holder</h3>
+                    <p class="product-price">$17.99</p>
+                    <a href="products/tooth-pen-holder.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: bathroom -->
+            <div class="product-card bathroom">
+                <img src="images/chicken-tp-holder.jpg" alt="Funny Chicken Toilet Paper Holder">
+                <div class="product-info">
+                    <h3 class="product-title">Chicken Toilet Paper Holder</h3>
+                    <p class="product-price">$19.99</p>
+                    <a href="products/chicken-tp-holder.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: desk, figurines -->
+            <div class="product-card desk figurines">
+                <img src="images/stanley-buddy.jpg" alt="Stanley Buddy Chapstick Holder">
+                <div class="product-info">
+                    <h3 class="product-title">Stanley Buddy Chapstick Holder</h3>
+                    <p class="product-price">$6.99</p>
+                    <a href="products/stanley-buddy.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: desk -->
+            <div class="product-card desk">
+                <img src="images/sitting-pencil-holder.jpg" alt="Sitting Pencil Holder">
+                <div class="product-info">
+                    <h3 class="product-title">Sitting Pencil Holder</h3>
+                    <p class="product-price">$11.99</p>
+                    <a href="products/sitting-pencil-holder.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: bathroom -->
+            <div class="product-card bathroom">
+                <img src="images/panda-tp-holder.jpg" alt="Panda Toilet Paper Holder">
+                <div class="product-info">
+                    <h3 class="product-title">Panda Toilet Paper Holder</h3>
+                    <p class="product-price">$15.00</p>
+                    <a href="products/panda-tp-holder.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: fidgets, figurines -->
+            <div class="product-card fidgets figurines">
+                <img src="images/spider-monster.jpg" alt="Creepy Red Spider Monster">
+                <div class="product-info">
+                    <h3 class="product-title">Creepy Red Spider Monster</h3>
+                    <p class="product-price">$12.00</p>
+                    <a href="products/spider-monster.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: wall -->
+            <div class="product-card wall">
+                <img src="images/et-rex.jpg" alt="ET Inspired T-Rex Bike Ride Wall Art">
+                <div class="product-info">
+                    <h3 class="product-title">ET Inspired T-Rex Wall Art</h3>
+                    <p class="product-price">$10.00</p>
+                    <a href="products/et-rex.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: wall -->
+            <div class="product-card wall">
+                <img src="images/tattered-flag.jpg" alt="Tattered American Flag with Skull & Wings">
+                <div class="product-info">
+                    <h3 class="product-title">Tattered American Flag Skull</h3>
+                    <p class="product-price">$14.99</p>
+                    <a href="products/tattered-flag.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: wall -->
+            <div class="product-card wall">
+                <img src="images/adult-outlet-cover.jpg" alt="Adult Humor Outlet Cover">
+                <div class="product-info">
+                    <h3 class="product-title">Adult Humor Outlet Cover</h3>
+                    <p class="product-price">$7.99</p>
+                    <a href="products/adult-outlet-cover.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: wall -->
+            <div class="product-card wall">
+                <img src="images/flag-skull-hanger.jpg" alt="American Flag Skull Wall Hanger">
+                <div class="product-info">
+                    <h3 class="product-title">American Flag Skull Hanger</h3>
+                    <p class="product-price">$20.00</p>
+                    <a href="products/flag-skull-hanger.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: figurines -->
+            <div class="product-card figurines">
+                <img src="images/glow-balloon-dog.jpg" alt="Glow in the Dark Balloon Dog">
+                <div class="product-info">
+                    <h3 class="product-title">Glow in the Dark Balloon Dog</h3>
+                    <p class="product-price">$5.99</p>
+                    <a href="products/glow-balloon-dog.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/glow-crystal-dragon.jpg" alt="Glow in the Dark Articulated Crystal Dragon">
+                <div class="product-info">
+                    <h3 class="product-title">Glow Crystal Dragon</h3>
+                    <p class="product-price">$15.00</p>
+                    <a href="products/glow-crystal-dragon.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/rainbow-dragon.jpg" alt="Articulated Crystal Dragon">
+                <div class="product-info">
+                    <h3 class="product-title">Articulated Crystal Dragon</h3>
+                    <p class="product-price">$9.99</p>
+                    <a href="products/rainbow-dragon.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/articulated-gecko.jpg" alt="Articulated Gecko Fidget Toy">
+                <div class="product-info">
+                    <h3 class="product-title">Articulated Gecko Fidget</h3>
+                    <p class="product-price">$8.99</p>
+                    <a href="products/articulated-gecko.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/skeleton-dragon.jpg" alt="Articulated Skeleton Dragon">
+                <div class="product-info">
+                    <h3 class="product-title">Articulated Skeleton Dragon</h3>
+                    <p class="product-price">$8.99</p>
+                    <a href="products/skeleton-dragon.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/goofy-dragon.jpg" alt="Goofy The Dragon">
+                <div class="product-info">
+                    <h3 class="product-title">Goofy The Dragon</h3>
+                    <p class="product-price">$5.99</p>
+                    <a href="products/goofy-dragon.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: figurines -->
+            <div class="product-card figurines">
+                <img src="images/patriotic-cat.jpg" alt="Patriotic Cat Figurine">
+                <div class="product-info">
+                    <h3 class="product-title">Patriotic Cat Figurine</h3>
+                    <p class="product-price">$6.99</p>
+                    <a href="products/patriotic-cat.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: figurines -->
+            <div class="product-card figurines">
+                <img src="images/ducking-finger.jpg" alt="The Ducking Finger Trophy">
+                <div class="product-info">
+                    <h3 class="product-title">The Ducking Finger Trophy</h3>
+                    <p class="product-price">$35.00</p>
+                    <a href="products/ducking-finger.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/flexi-rex.jpg" alt="Flexi Rex Dinosaur Fidget Toy">
+                <div class="product-info">
+                    <h3 class="product-title">Flexi Rex Fidget Toy</h3>
+                    <p class="product-price">$6.99</p>
+                    <a href="products/flexi-rex.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: figurines -->
+            <div class="product-card figurines">
+                <img src="images/peeking-bunny.jpg" alt="Cute Peeking Bunny Figurine">
+                <div class="product-info">
+                    <h3 class="product-title">Cute Peeking Bunny</h3>
+                    <p class="product-price">$5.99</p>
+                    <a href="products/peeking-bunny.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/infinity-cube.jpg" alt="Solid Infinity Cube Fidget Toy">
+                <div class="product-info">
+                    <h3 class="product-title">Solid Infinity Cube Fidget</h3>
+                    <p class="product-price">$4.99</p>
+                    <a href="products/infinity-cube.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: figurines -->
+            <div class="product-card figurines">
+                <img src="images/balloon-dog.jpg" alt="3D Printed Balloon Dog Figurine">
+                <div class="product-info">
+                    <h3 class="product-title">Balloon Dog Figurine</h3>
+                    <p class="product-price">$5.99</p>
+                    <a href="products/balloon-dog.html" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY: fidgets -->
+            <div class="product-card fidgets">
+                <img src="images/articulated-orca.jpg" alt="Articulated Orca Fidget Toy">
+                <div class="product-info">
+                    <h3 class="product-title">Articulated Orca Fidget</h3>
+                    <p class="product-price">$5.75</p>
+                    <a href="products/articulated-orca.html" class="btn">View Details</a>
+                </div>
+            </div>
+
+            <!-- Original Demo Products -->
+            <div class="product-card figurines">
                 <img src="images/product1.jpg" alt="Demo Product 1">
                 <div class="product-info">
                     <h3 class="product-title">Premium Wireless Headphones</h3>
@@ -43,9 +303,7 @@
                     <a href="products/product1.html" class="btn">View Details</a>
                 </div>
             </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
+            <div class="product-card desk">
                 <img src="images/product2.jpg" alt="Demo Product 2">
                 <div class="product-info">
                     <h3 class="product-title">Sleek Smartwatch</h3>
@@ -53,8 +311,6 @@
                     <a href="products/product2.html" class="btn">View Details</a>
                 </div>
             </div>
-            
-            <!-- Add more products here as you create them -->
 
         </div>
     </main>
@@ -64,6 +320,7 @@
     </footer>
 
     <script>
+        // --- THEME TOGGLE SCRIPT ---
         const themeToggle = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -78,6 +335,29 @@
         themeToggle.addEventListener('change', () => {
             setTheme(themeToggle.checked ? 'dark' : 'light');
         });
+
+        // --- PRODUCT FILTER SCRIPT ---
+        function filterSelection(category) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                // If the category is 'all' or the card's class list contains the category, show it
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+
+            // Update active state on buttons
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(button => {
+                if (button.getAttribute('onclick') === `filterSelection('${category}')`) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
