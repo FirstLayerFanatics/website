@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Your Brand Name</title>
+    <title>Home - First Layer Fanatics</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-theme="dark">
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Your Brand Name</a>
+        <a href="index.html" class="logo">First Layer Fanatics</a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="store.html">Store</a></li>
             <li><a href="policies.html">Policies</a></li>
+            <li>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -27,6 +35,7 @@
         <section class="featured-products">
             <h2>Featured Products</h2>
             <div class="product-grid">
+                <!-- Featured Product 1 -->
                 <div class="product-card">
                     <img src="images/product1.jpg" alt="Demo Product 1">
                     <div class="product-info">
@@ -36,6 +45,7 @@
                     </div>
                 </div>
 
+                <!-- Featured Product 2 -->
                 <div class="product-card">
                     <img src="images/product2.jpg" alt="Demo Product 2">
                     <div class="product-info">
@@ -49,8 +59,29 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Your Brand Name. All Rights Reserved.</p>
+        <p>&copy; 2025 First Layer Fanatics. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+
+        // Function to set the theme
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.checked = (theme === 'dark');
+        }
+
+        // Check for a saved theme in localStorage, or use the body's default
+        const savedTheme = localStorage.getItem('theme') || document.body.getAttribute('data-theme');
+        
+        // Apply the determined theme
+        setTheme(savedTheme);
+
+        // Add event listener for the toggle
+        themeToggle.addEventListener('change', () => {
+            setTheme(themeToggle.checked ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>

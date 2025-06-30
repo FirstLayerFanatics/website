@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Wireless Headphones - Your Brand Name</title>
+    <title>Premium Wireless Headphones - First Layer Fanatics</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="../index.html" class="logo">Your Brand Name</a>
+        <a href="../index.html" class="logo">First Layer Fanatics</a>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../store.html" class="active">Store</a></li>
             <li><a href="../policies.html">Policies</a></li>
+            <li>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -35,6 +43,14 @@
                     </ul>
                 </div>
                 <div class="stripe-buy-button">
+                    <!-- 
+                        PASTE YOUR STRIPE BUY BUTTON CODE HERE 
+                        1. Go to your Stripe Dashboard > Products.
+                        2. Click this product.
+                        3. Create a Payment Link.
+                        4. Click "Share" and copy the "Buy Button" embed code.
+                        5. Paste the code below this comment.
+                    -->
                     <p><em>Your Stripe "Buy Now" button will appear here.</em></p>
                 </div>
             </div>
@@ -42,8 +58,25 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Your Brand Name. All Rights Reserved.</p>
+        <p>&copy; 2025 First Layer Fanatics. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.checked = (theme === 'dark');
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('change', () => {
+            setTheme(themeToggle.checked ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>
